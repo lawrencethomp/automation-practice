@@ -7,6 +7,10 @@ const baseSiteUrl = 'https://magento.softwaretestingboard.com/';
   let driver = await new Builder().forBrowser('chrome').build();
   try {
     await driver.get(baseSiteUrl);
+    // Code to assert that things appear on page.
+    
+    // Code to click something.
+    
   } finally {
     await driver.quit();
   }
