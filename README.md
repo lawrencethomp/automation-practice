@@ -15,6 +15,6 @@ File Structure is borrowed from [Automation Testing with Selenium JavaScript](ht
 - data
 
 ## Goals
-Abstract away implementation so that when a tool changes, the base logic doesn't need to change.
-Create a readable framework of tests.
+- Abstract away implementation so that when a tool changes, the base logic doesn't need to change.  
+- Create a readable framework of tests.
 
