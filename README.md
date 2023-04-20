@@ -19,6 +19,9 @@ File Structure is borrowed from [Automation Testing with Selenium JavaScript](ht
 - util
 - data
 
+## Design Pattern
+The inital design pattern is going to be taken from [Page Object Model in Selenium and JavaScript](https://www.browserstack.com/guide/page-object-model-using-selenium-javascript) 
+
 ## Goals
 - Abstract away implementation so that when a tool changes, the base logic doesn't need to change.  
 - Create a readable framework of tests.
