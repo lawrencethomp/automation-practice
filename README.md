@@ -15,6 +15,7 @@ File Structure is borrowed from [Automation Testing with Selenium JavaScript](ht
 - tests
 -   tests will be handled with a module by file
 - resources
+  - Strings are going to be included so that the page can simulate if there were promotional/language related changes.
 - util
 - data
 
