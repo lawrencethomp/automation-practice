@@ -4,12 +4,11 @@
   "description": "This repo was made to practice on http://automationpractice.com/",
   "main": "index.js",
   "dependencies": {
-    "chromedriver": "^106.0.1",
+    "chromedriver": "^113.0.0",
     "geckodriver": "^3.2.0",
     "save": "^2.9.0",
     "selenium-webdriver": "^4.5.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
