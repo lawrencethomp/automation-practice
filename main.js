@@ -1,22 +1,24 @@
-const pageURLs = require('./test/conf/urls')
-const driver = require('./test/pages/basepage');
-const {Builder, Browser, By, Key, until} = require('selenium-webdriver');
-
+const {Builder, Browser, Key} = require('selenium-webdriver');
+const pageURLs = require('./test/conf/urls');
 const baseSiteUrl = pageURLs.mainPageUrl;
 
-(async function example() {
-  try {
-    await driver.get(baseSiteUrl);
-    // Code to assert that things appear on page.
-    const notLoggedIn = await driver.findElement(By.className('not-logged-in'));
+const driver = require('./test/pages/basepage');
+const getTextByClass  = require("./pageutils");
 
-    // Explicitly wait until the element has visible text
-    await driver.wait(until.elementTextMatches(notLoggedIn, /./));
+function getWebSite(siteURL) {
+  return driver.get(siteURL);
+}
 
-    const text = await notLoggedIn.getText();
-    // Code to click something.
-    
-  } finally {
-    await driver.quit();
-  }
-})();
+async function checkDefaultWelcomeMsg() {
+    try {
+      await getWebSite(baseSiteUrl);
+      var notLoggedInText = await getTextByClass('not-logged-in');
+    } finally {
+      await driver.quit();
+      return notLoggedInText;
+    }
+}
+
+module.exports = checkDefaultWelcomeMsg;
+
+

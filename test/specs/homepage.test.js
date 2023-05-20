@@ -1,3 +1,22 @@
+const aboutUsMsg = "About us";
+const custServiceMsg = "Customer Service";
+const searchTermsMsg = "Search Terms";
+const cookiePrivacyMsg = "Privacy and Cookie Policy";
+const advSearchMsg = "Advanced Search";
+const ordersReturnsMsg = "Orders and Returns";
+const contactUsMsg = "Contact Us";
+const lumaYogaTitle = "Get fit and look fab in new seasonal styles";
+const copyrightMsg = "Copyright © 2013-present Magento, Inc. All rights reserved.";
+
+
+let checkDefaultWelcomeMsg = require('./../../main');
+const welcomeMsg = 'Default welcome msg!';
+
+test('Check that the Default Welcome Message is correctly formatted', async () => {
+  const testWelcomeMsg = await checkDefaultWelcomeMsg();
+    expect(testWelcomeMsg).toBe(welcomeMsg);
+ });
+
 // I can see the logo
 
 // I can see the About Us
@@ -19,12 +38,4 @@
 // I can see the Hot Sellers
 
 // Going with Strings here to simulate if there were multiple languages.
-const aboutUsMsg = "About us";
-const custServiceMsg = "Customer Service";
-const searchTermsMsg = "Search Terms";
-const cookiePrivacyMsg = "Privacy and Cookie Policy";
-const advSearchMsg = "Advanced Search";
-const ordersReturnsMsg = "Orders and Returns";
-const contactUsMsg = "Contact Us";
-const lumaYogaTitle = "Get fit and look fab in new seasonal styles";
-const copyrightMsg = "Copyright © 2013-present Magento, Inc. All rights reserved.";
+
