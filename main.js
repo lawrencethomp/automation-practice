@@ -1,14 +1,19 @@
+const pageURLs = require('./test/conf/urls')
+const driver = require('./test/pages/basepage');
 const {Builder, Browser, By, Key, until} = require('selenium-webdriver');
-require('chromedriver');
 
-const baseSiteUrl = 'https://magento.softwaretestingboard.com/';
+const baseSiteUrl = pageURLs.mainPageUrl;
 
 (async function example() {
-  let driver = await new Builder().forBrowser('chrome').build();
   try {
     await driver.get(baseSiteUrl);
     // Code to assert that things appear on page.
-    
+    const notLoggedIn = await driver.findElement(By.className('not-logged-in'));
+
+    // Explicitly wait until the element has visible text
+    await driver.wait(until.elementTextMatches(notLoggedIn, /./));
+
+    const text = await notLoggedIn.getText();
     // Code to click something.
     
   } finally {

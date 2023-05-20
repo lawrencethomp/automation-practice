@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/lawrencethomp/automation-practice/issues"
   },
-  "homepage": "https://github.com/lawrencethomp/automation-practice#readme"
+  "homepage": "https://github.com/lawrencethomp/automation-practice#readme",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
 }
