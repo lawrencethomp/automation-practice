@@ -7,10 +7,10 @@ const { getWebSite, closeWebSite } = require("../utils/pageactions");
 
 async function checkDefaultWelcomeMsg() {
     try {
-      await getWebSite(baseSiteUrl);
+      // await getWebSite(baseSiteUrl);
       var notLoggedInText = await getTextByClass('not-logged-in');
     } finally {
-      await closeWebSite();
+      // await closeWebSite();
       return notLoggedInText;
     }
 }

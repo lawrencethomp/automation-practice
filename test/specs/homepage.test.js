@@ -1,3 +1,6 @@
+const checkDefaultWelcomeMsg = require('./../../pages/homepage');
+const {closeWebSite, getWebSite} = require('../../utils/pageactions');
+
 const aboutUsMsg = "About us";
 const custServiceMsg = "Customer Service";
 const searchTermsMsg = "Search Terms";
@@ -7,18 +10,14 @@ const ordersReturnsMsg = "Orders and Returns";
 const contactUsMsg = "Contact Us";
 const lumaYogaTitle = "Get fit and look fab in new seasonal styles";
 const copyrightMsg = "Copyright © 2013-present Magento, Inc. All rights reserved.";
-
-
-let checkDefaultWelcomeMsg = require('./../../pages/homepage');
-// const {getWebsite, closeWebSite} =
 const welcomeMsg = 'Default welcome msg!';
 
 beforeEach(() => {
-
+  getWebSite("https://magento.softwaretestingboard.com");
 });
 
 afterEach(() => {
-
+  closeWebSite();
 });
 
 test('Check that the Default Welcome Message is correctly formatted', async () => {
