@@ -6,12 +6,4 @@ let driver = new Builder().forBrowser('chrome').build();
 // Basepage is going to have driver elements in it
 // As well as action elements
 
-function getWebSite(siteURL) {
-    return driver.get(siteURL);
-  }
-  
-  function closeBrowser() {
-    return driver.quit();
-  }
-
 module.exports = driver;

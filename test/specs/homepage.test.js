@@ -9,8 +9,17 @@ const lumaYogaTitle = "Get fit and look fab in new seasonal styles";
 const copyrightMsg = "Copyright © 2013-present Magento, Inc. All rights reserved.";
 
 
-let checkDefaultWelcomeMsg = require('./../../main');
+let checkDefaultWelcomeMsg = require('./../../pages/homepage');
+// const {getWebsite, closeWebSite} =
 const welcomeMsg = 'Default welcome msg!';
+
+beforeEach(() => {
+
+});
+
+afterEach(() => {
+
+});
 
 test('Check that the Default Welcome Message is correctly formatted', async () => {
   const testWelcomeMsg = await checkDefaultWelcomeMsg();
