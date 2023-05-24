@@ -1,4 +1,4 @@
-const driver = require('./driver');
+const driver = require('./basepage');
 
 function getWebSite(siteURL) {
   return driver.get(siteURL);

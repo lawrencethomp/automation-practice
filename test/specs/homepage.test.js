@@ -1,6 +1,8 @@
 const checkDefaultWelcomeMsg = require('./../../pages/homepage');
 const {closeWebSite, getWebSite} = require('../../utils/pageactions');
+const checkString = require('./../utils/testutils');
 
+const welcomeMsg = 'Default welcome msg!';
 const aboutUsMsg = "About us";
 const custServiceMsg = "Customer Service";
 const searchTermsMsg = "Search Terms";
@@ -10,7 +12,7 @@ const ordersReturnsMsg = "Orders and Returns";
 const contactUsMsg = "Contact Us";
 const lumaYogaTitle = "Get fit and look fab in new seasonal styles";
 const copyrightMsg = "Copyright © 2013-present Magento, Inc. All rights reserved.";
-const welcomeMsg = 'Default welcome msg!';
+
 
 beforeEach(() => {
   getWebSite("https://magento.softwaretestingboard.com");
@@ -22,7 +24,7 @@ afterEach(() => {
 
 test('Check that the Default Welcome Message is correctly formatted', async () => {
   const testWelcomeMsg = await checkDefaultWelcomeMsg();
-    expect(testWelcomeMsg).toBe(welcomeMsg);
+  checkString(testWelcomeMsg, welcomeMsg);
  });
 
 // I can see the logo
