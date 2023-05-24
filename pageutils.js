@@ -1,5 +1,5 @@
 const { By, until } = require('selenium-webdriver');
-const driver = require('./utils/basepage');
+const {driver} = require('./utils/basepage');
 
 
 async function getTextByClass(className) {

@@ -25,9 +25,17 @@ class BasePage{
         await driver.findElement(By.id(id)).click();
     }
 
+    async getTextByClass(className) {
+        const notLoggedIn = await driver.findElement(By.className(className));
+        await driver.wait(until.elementTextMatches(notLoggedIn, /./));
+      
+        return notLoggedIn.getText();
+      }
+
     async closeBrowser() {
         await driver.quit();
     }
+    
 }
 
-module.exports = driver;
+module.exports = {driver, BasePage};

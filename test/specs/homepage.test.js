@@ -1,5 +1,4 @@
-const checkDefaultWelcomeMsg = require('./../../pages/homepage');
-const {closeWebSite, getWebSite} = require('../../utils/pageactions');
+const homepage = require('./../../pages/homepage');
 const checkString = require('./../utils/testutils');
 
 const welcomeMsg = 'Default welcome msg!';
@@ -15,15 +14,15 @@ const copyrightMsg = "Copyright © 2013-present Magento, Inc. All rights reserve
 
 
 beforeEach(() => {
-  getWebSite("https://magento.softwaretestingboard.com");
+  homepage.goToURL("https://magento.softwaretestingboard.com");
 });
 
 afterEach(() => {
-  closeWebSite();
+  homepage.closeBrowser();
 });
 
 test('Check that the Default Welcome Message is correctly formatted', async () => {
-  const testWelcomeMsg = await checkDefaultWelcomeMsg();
+  const testWelcomeMsg = await homepage.checkDefaultWelcomeMsg();
   checkString(testWelcomeMsg, welcomeMsg);
  });
 
