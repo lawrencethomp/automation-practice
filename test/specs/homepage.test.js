@@ -26,8 +26,10 @@ test('Check that the Default Welcome Message is correctly formatted', async () =
   checkString(testWelcomeMsg, welcomeMsg);
  });
 
-// I can see the logo
-
+test('Check that a User can sign in', async () => {
+  const checkSignInStr = await homepage.signIn();
+  checkString('Welcome, lawrence fake!', checkSignInStr);
+});
 // I can see the About Us
 
 // I can see the Subscribe Functionality
