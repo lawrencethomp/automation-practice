@@ -13,11 +13,11 @@ const lumaYogaTitle = "Get fit and look fab in new seasonal styles";
 const copyrightMsg = "Copyright © 2013-present Magento, Inc. All rights reserved.";
 
 
-beforeEach(() => {
+beforeAll(() => {
   homepage.goToURL("https://magento.softwaretestingboard.com");
 });
 
-afterEach(() => {
+afterAll(() => {
   homepage.closeBrowser();
 });
 
@@ -30,7 +30,6 @@ test('Check that a User can sign in', async () => {
   const checkSignInStr = await homepage.signIn();
   checkString('Welcome, lawrence fake!', checkSignInStr);
 });
-// I can see the About Us
 
 // I can see the Subscribe Functionality
 
