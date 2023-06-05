@@ -18,6 +18,10 @@ class HomePage extends BasePage{
     return loggedInText;
   }
 
+  async createAccount(){
+    
+  }
+
 };
 
 module.exports = new HomePage();

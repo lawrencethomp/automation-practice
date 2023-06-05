@@ -31,15 +31,15 @@ test('Check that a User can sign in', async () => {
   checkString('Welcome, lawrence fake!', checkSignInStr);
 });
 
-// I can see the Subscribe Functionality
+// Subscribe 
 
-// I can see the Search Functionality
+// Search 
 
 // I can see the Header bar
 
 // I Can see the Cart
 
-// I can see the Create an Account
+// Create an Account
 
 // I can see the Default Logo
 
