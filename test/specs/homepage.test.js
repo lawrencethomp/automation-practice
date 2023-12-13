@@ -1,7 +1,7 @@
 const homepage = require('./../../pages/homepage');
 const checkString = require('./../utils/testutils');
 
-const welcomeMsg = 'Default welcome msg!';
+const welcomeMsg = 'Click “Write for us” link in the footer to submit a guest post';
 const aboutUsMsg = "About us";
 const custServiceMsg = "Customer Service";
 const searchTermsMsg = "Search Terms";
